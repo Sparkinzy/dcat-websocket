@@ -1,9 +1,9 @@
 {
     "name": "sparkinzy/dcat-websocket",
     "alias": "",
-    "description": "Description...",
+    "description": "为Dcat Admin 一键集成websocket功能",
     "type": "library",
-    "keywords": ["dcat-admin", "extension"],
+    "keywords": ["dcat-admin", "extension","websocket"],
     "homepage": "https://github.com/sparkinzy/dcat-websocket",
     "license": "MIT",
     "authors": [
@@ -15,7 +15,8 @@
     "require": {
         "php": ">=7.1.0",
         "dcat/laravel-admin": "~2.0",
-        "beyondcode/laravel-websockets": "^1.12"
+        "pusher/pusher-php-server": "~4.0",
+        "beyondcode/laravel-websockets": "^1.13"
     },
     "autoload": {
         "psr-4": {

@@ -10,6 +10,7 @@ class DcatWebsocketController extends Controller
 {
     public function authenticate(Request $request)
     {
+        # 将后台的用户验证变更为Dcat auth
         $request->setUserResolver(function () {
             return Admin::user();
         });

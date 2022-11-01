@@ -14,8 +14,8 @@ Route::get( '/broadcasting/auth',
 Route::post( '/broadcasting/auth',
     Controllers\DcatWebsocketController::class.'@authenticate'
 )
-    ->middleware(config('admin.route.middleware'))
     ->withoutMiddleware(VerifyCsrfToken::class)
+    ->middleware(config('admin.route.middleware'))
     ->name('broadcasting.auth.post');
 
 Route::get('/push', function (\Illuminate\Http\Request $request) {

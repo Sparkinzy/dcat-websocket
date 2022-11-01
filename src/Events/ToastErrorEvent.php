@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Sparkinzy\DcatWebsocket\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -17,7 +17,7 @@ use Illuminate\Queue\SerializesModels;
  *
  * @package App\Events
  */
-class ToastErrorEvent
+class ToastErrorEvent implements ShouldBroadcast
 {
     use Dispatchable;
     use InteractsWithSockets;
