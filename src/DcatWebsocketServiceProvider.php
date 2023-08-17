@@ -2,8 +2,8 @@
 
 namespace Sparkinzy\DcatWebsocket;
 
-use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Admin;
+use Dcat\Admin\Extend\ServiceProvider;
 
 class DcatWebsocketServiceProvider extends ServiceProvider
 {
@@ -17,7 +17,6 @@ class DcatWebsocketServiceProvider extends ServiceProvider
 
     public function register()
     {
-
     }
 
     public function init()
@@ -25,10 +24,7 @@ class DcatWebsocketServiceProvider extends ServiceProvider
         parent::init();
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-        # 前端资源加载与初始化
+        // 前端资源加载与初始化
         Admin::requireAssets('@sparkinzy.dcat-websocket');
-
     }
-
-
 }

@@ -2,20 +2,16 @@
 
 namespace Sparkinzy\DcatWebsocket\Events;
 
-use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
 /**
- * 触发成功消息推送到前台
+ * 触发成功消息推送到前台.
  *
  * Class ToastEvent
- *
- * @package App\Events
  */
 class ToastSuccessEvent implements ShouldBroadcast
 {
@@ -29,8 +25,8 @@ class ToastSuccessEvent implements ShouldBroadcast
     /**
      * Create a new event instance.
      *
-     * @param  int  $user_id
-     * @param  string  $message  提示消息
+     * @param int    $user_id
+     * @param string $message 提示消息
      */
     public function __construct(int $user_id, string $message)
     {
@@ -49,7 +45,7 @@ class ToastSuccessEvent implements ShouldBroadcast
     }
 
     /**
-     * 广播时间名称
+     * 广播时间名称.
      *
      * @return string
      */
